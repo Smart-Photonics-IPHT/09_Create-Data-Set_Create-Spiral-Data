@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 # Function to generate a spiral
 
-
+# Glitta was here for the git hub workshop. Checking out the branch "Glitta".
 def generate_spiral(theta_max, totalpoints = 300):
     #return a * np.exp(b * t) * np.array([np.cos(t), np.sin(t)])
     t = np.linspace(0, theta_max, totalpoints)
