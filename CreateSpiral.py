@@ -17,6 +17,8 @@ def generate_multiple_spirals(theta_max, totalpoints = 200, sprials_number = 4):
         Sprials.append(t * np.array([np.cos(t + i*2*np.pi/(sprials_number)) , np.sin(t + i*2*np.pi/(sprials_number))]))
     return t, Sprials[:sprials_number]
 
+def generate_multidimensional_spiral(dimension = 3, theta_max, totalpoints = 200, sprials_number = 4)
+    return
 
 # # Parameters for the first spiral
 # a1, b1 = 1, 0.1
