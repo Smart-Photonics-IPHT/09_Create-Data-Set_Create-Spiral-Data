@@ -10,7 +10,7 @@ task = ""
 description = ""
 parameters = ""
 # Create main folder and sub folders and generate the readme file inside it
-# 
+#
 
 def generate_multiple_spirals(theta_max, totalpoints=300, sprials_number=4, max_noise=0):
     #return a * np.exp(b * t) * np.array([np.cos(t), np.sin(t)])
