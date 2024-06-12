@@ -33,7 +33,8 @@ def generate_multiple_spirals(saving_dir, theta_max, totalpoints=300, spirals_nu
     plt.xlabel('X', fontsize=24)
     plt.ylabel('Y', fontsize=24)
     pi_symbol = '\u03c0'
-    plt.title(f'{spirals_number} Spirals_Theta-Max={theta_max}{pi_symbol}_Max-Noise={max_noise}', fontsize=24)
+    plt.title(f'{spirals_number} Spirals_Theta-Max={theta_max}{pi_symbol}_Max-Noise={max_noise}_ '
+              f'points-count-per-spiral={totalpoints}', fontsize=24)
     plt.gca().set_aspect('equal')
     #plt.legend(fontsize=14, loc='upper left')
 
@@ -53,13 +54,11 @@ def generate_multiple_spirals(saving_dir, theta_max, totalpoints=300, spirals_nu
     all_labels_coordinates = np.vstack([combined_array_i for combined_array_i in spirals_data])
 
     if save_results_in_text_file:
-        filename = f'{saving_dir}/Dataset_{spirals_number}-Spirals_theta-max={theta_max}pi_max-noise={max_noise}.txt'
+        filename = f'{saving_dir}/Dataset_{spirals_number}-Spirals_theta-max={theta_max}pi_max-noise={max_noise}' \
+                   f'_points-count-per-spiral={totalpoints}.txt'
         np.savetxt(filename, all_labels_coordinates, fmt='%1.4f', delimiter=',')
 
     return all_labels_coordinates
 
-# Example
-saving_dir = os.path.abspath(os.getcwd())
-generate_multiple_spirals(saving_dir, 10, totalpoints=300, spirals_number=4, max_noise=0.2,
-                          save_results_in_text_file=True, save_plot=True, show_plot=True)
+
 
